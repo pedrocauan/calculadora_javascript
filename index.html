@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/mobile.css" media="screen and (max-width: 640px)">
     <title>Calculadora</title>
 </head>
+
 <body>
-    <section class="fundo">
-        <h2>Calculadora</h2>
-        <div class="calculadora">
-            <p id="result">aaaaa</p>
+    <div class="bg-color main-container centralize">
+        <section class="calculadora centralize">
+            <div class="title flex main-content">
+                <h2>Calculadora</h2>
+                <div class="interation-buttons flex">
+                    <button class="flex">-</button>
+                    <button>&#9633;</button>
+                    <button>x</button>
+                </div>
+            </div>
+            <p id="result" class="result">aaaaa</p>
             <!--Os botões da calculadora são uma tabela-->
-            <table id="buttons">
+            <table id="buttons" class="buttons main-content">
                 <!--Linha 1-->
-                <tr>
+                <tr class="first-line">
                     <!--itens-->
                     <td>
-                        <button>C</button>
+                        <button>c</button>
                     </td>
                     <td>
-                        <button>D</button>
+                        <button><</button>
                     </td>
                     <td>
                         <button>/</button>
@@ -62,7 +73,7 @@
                         <button>+</button>
                     </td>
                 </tr>
-    
+
                 <!--Linha 4-->
                 <tr>
                     <!--itens-->
@@ -79,7 +90,7 @@
                         <button>=</button>
                     </td>
                 </tr>
-    
+
                 <!--Linha 5-->
                 <tr>
                     <!--itens-->
@@ -91,8 +102,9 @@
                     </td>
                 </tr>
             </table>
-        </div>
+    </div>
 
-    </section>
+    </div>
 </body>
+
 </html>
