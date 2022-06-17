@@ -39,6 +39,7 @@ body {
     padding: 2rem;
 }
 
+/*Centraliza elementos em linha*/
 .flex {
     display: flex;
     align-items: center;
@@ -95,7 +96,7 @@ body {
 
     
 }
-/*Estilização do botão*/
+/*Estilização da caixa de resultado*/
 .calculadora .result{
     background-color: white;
     width: 90%;
@@ -107,7 +108,7 @@ body {
     color: blue;
 }
 
-/*Estilizando os digitos da calculadora*/
+/*Estilização dos digitos da calculadora*/
 .calculadora .buttons {
     width: 40rem;
     height: 40rem;
@@ -124,11 +125,11 @@ body {
     box-shadow: inset 0rem 0rem 0.2rem 0.2rem rgba(136, 136, 136, 0.8), 0.2rem 0.2rem rgba(9, 9, 9, 0.8);
     color: #43457F;
 }
-/*Deixa a primeira linha da calculadora toda vermelha*/
+/*Deixa a primeira linha da calculadora com a fonte toda vermelha*/
 .calculadora .buttons .first-line button {
     color: #FB4142;
 }
-/*Pega os  botõoes -, +, =, . e deixa eles vermelhos*/
+/*Pega os  botõoes -, +, =, . e deixa a fonte deles vermelhos*/
 .calculadora .buttons td:nth-last-child(1) button
 {
     color: #FB4142;
