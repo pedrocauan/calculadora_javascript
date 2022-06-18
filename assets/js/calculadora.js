@@ -63,8 +63,21 @@ const backspace = function() {
 
 }
 
+const deleteDigit = function() {
+    const deleteButton = document.querySelector("#delete");
+    deleteButton.addEventListener("click", function() {
+        const num = result.innerHTML; //Pega o valor que ta na tela
+
+        //Tira sempre o ultimo digito quando o usuario clica no botao
+        result.innerHTML = num.substring(0, num.length - 1);
+        //Atualiza a variavel  de digitos para que o maximo ainda seja 15
+        resultDigits = num.length  - 1;
+    })
+
+}
+
 insert();
 cls();
-backspace();
+deleteDigit();
 
 
