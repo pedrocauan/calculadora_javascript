@@ -101,11 +101,12 @@ body {
     background-color: white;
     width: 90%;
     padding: 2rem;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: 700;
     /*sombra interna e externa do RESULTADO*/
     box-shadow: inset 0rem 0rem 0.2rem 0.2rem rgba(136, 136, 136, 0.8), 0.4rem 0.4rem rgba(9, 9, 9, 0.8);
     color: blue;
+    text-align: right;
 }
 
 /*Estilização dos digitos da calculadora*/
