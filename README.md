@@ -10,6 +10,7 @@
 1.  [ ] - Criar o script da calculadora.
     1. [x] - Criar função insert.
     1. [x] - Criar função de apagar a tela (cls).
+    1. [ ] - Criar função deleteDigit
 1.  [ ] - Implementar melhorias de acessibilidade para o usuário.
 1.  [ ] - Deploy da calculadora.
 1.  [ ] - Correção de bugs.
