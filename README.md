@@ -14,3 +14,5 @@
 1.  [ ] - Implementar melhorias de acessibilidade para o usuário.
 1.  [ ] - Deploy da calculadora.
 1.  [ ] - Correção de bugs.
+
+aaa
