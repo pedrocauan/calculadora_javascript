@@ -1,7 +1,6 @@
 const result = document.querySelector("#result"); 
 const maxDigits = 15; //Quantidade maxima de digitos que a calculadora permite
 let resultDigits = 0; //Quantidade de digitos que o usuario colocou na calculadora
-
 //Pega os botoes com os digitos 1,2,3,4,5,6,7,8,9 e .
 const digitButtons = document.querySelectorAll("#buttons button");
 
@@ -23,7 +22,9 @@ const insert = function() {
     
     digitButtons.forEach(button => {
         //Pega o numero dentro do botão e joga no campo de resultado
-        button.addEventListener("click", function(num){  
+        button.addEventListener("click", function(num){ 
+            console.log(resultDigits);
+ 
 
             let digit = num.target.innerHTML;//DIgito do botao selecionado
             if(!validDigit(digit))
@@ -47,37 +48,45 @@ const cls = function() {
             //Se o operador que tiver no botao for a letra C ele apaga a tela
             if(operator.target.innerHTML === "c")
             {
-                result.innerHTML = '';
+                result.innerHTML = "&nbsp;";
                 resultDigits = 0;
             }           
         });
     });
 }
+
 //Apaga digito
-const backspace = function() {
-    const deleteButton = document.querySelector("#delete");
-    deleteButton.addEventListener("click", function(){
-        
-        
-    });
-
-}
-
 const deleteDigit = function() {
     const deleteButton = document.querySelector("#delete");
     deleteButton.addEventListener("click", function() {
         const num = result.innerHTML; //Pega o valor que ta na tela
 
-        //Tira sempre o ultimo digito quando o usuario clica no botao
+        //Tira  o ultimo digito quando o usuario clica no botao
         result.innerHTML = num.substring(0, num.length - 1);
         //Atualiza a variavel  de digitos para que o maximo ainda seja 15
-        resultDigits = num.length  - 1;
-    })
+        resultDigits--;
+    });
 
+}
+//Insere a virgula
+const insertDot = function() {
+    digitButtons.forEach(button => {
+        button.addEventListener("click", function(operator){
+            //roda o evento quando clica no ponto
+            if(operator.target.innerHTML === "."){
+                if(!result.innerHTML.includes(".") && resultDigits > 0)
+                {
+                    result.innerHTML += ".";
+                    resultDigits--; //Atualiza a variavel  de digitos para que o maximo ainda seja 15
+                    return;
+                } 
+            }
+        });
+    });
 }
 
 insert();
 cls();
 deleteDigit();
-
+insertDot();
 
